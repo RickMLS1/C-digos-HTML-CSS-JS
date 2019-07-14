@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Vamos jogar!</title> 
+  
+    <script type="text/javascript"> 
+      function compare(n, nom1, nom2, controle, erros1, erros2, age1, age2) 
+      { 
+        if(controle == 0) 
+        { 
+          num = prompt(nom1 + " digite um número: "); 
+ 
+          if(num == n) 
+          { 
+            alert(nom1 + " de " + age1 + " anos venceu com: 1 acerto e " + erros1 + " erros. Parabéns!"); 
+            alert(nom2 +" de " + age2 +" anos, não obteve acertos e teve " + erros2 +" erros. Não foi dessa vez, tente novamente!"); 
+            return 0; 
+          } 
+          else if(num > n) 
+          { 
+            alert(nom1 + " tente um número menor!"); 
+ 
+            return compare(n, nom1, nom2, 1, erros1 + 1, erros2, age1, age2); 
+          } 
+          else 
+          { 
+            alert(nom1 + " tente um número maior!"); 
+            return compare(n, nom1, nom2, 1, erros1 + 1, erros2, age1, age2); 
+          } 
+        } 
+   
+        else 
+        { 
+          num = prompt(nom2 + " digite um número: "); 
+ 
+          if(num == n) 
+          { 
+            alert(nom2 + " de " + age2 + " anos venceu com: 1 acerto e " + erros2 + " erros. Parabéns!"); 
+            alert(nom1 +" de " + age1 +" anos, não obteve acertos e teve " + erros1 +" erros. Não foi dessa vez, tente novamente!"); 
+            return 0; 
+          } 
+          else if(num > n) 
+          { 
+            alert(nom2 + " tente um número menor!"); 
+ 
+            return compare(n, nom1, nom2, 0, erros1, erros2 + 1, age1, age2); 
+          } 
+          else 
+          { 
+            alert(nom2 + " tente um número maior!"); 
+  
+            return compare(n, nom1, nom2, 0, erros1, erros2 + 1, age1, age2); 
+          } 
+        } 
+      } 
+ 
+      function oraculo() 
+      { 
+        var numero = Math.floor(Math.random() * 20 + 1); 
+        var nom1 = document.forms[0].nome1.value; 
+        var nom2 = document.forms[0].nome2.value; 
+        var age1 = document.forms[0].idade1.value; 
+        var age2 = document.forms[0].idade2.value; 
+        compare(numero, nom1, nom2, 0, 0, 0, age1, age2);  
+  /*a função compare irá receber como parâmetro o número gerado pelo Math.floor(Math.random), o nome dos jogadores, 
+  uma variável de controle que será a identificação dos jogadores(0 para o jogador 1 e 1 para o jogador 2), 
+  a quantidade de erros e acertos e as idades dos jogadores. 
+  */ 
+      } 
+ 
+    </script> 
+    <style> 
+      input 
+      { 
+ 
+      } 
+      h3{ 
+        font-family: Arial; 
+        text-align: center; 
+        color: white; 
+      } 
+      p 
+      { 
+        font-family: Arial; 
+        font-size: 15px; 
+        text-align: center; 
+        color: white; 
+      } 
+      form 
+      { 
+        font-family: Arial; 
+        text-align: center; 
+      } 
+      h1 
+      { 
+        color: white; 
+        text-align: center; 
+        font-family: Arial; 
+        font-size: 65px; 
+      } 
+ 
+      body 
+      { 
+        background-color: black; 
+      } 
+      </style> 
+  </head> 
+  <body> 
+        <h1> ORÁCULO!</h1> 
+        <h3> Bem vindo ao jogo da adivinhação! Tente adivinhar o número entre 1 e 20 que o Oráculo está pensando.</h3><br> 
+   
+        <form> 
+          <p> Digite o nome do primeiro jogador</p> 
+          <input type="text" name="nome1" value=""><br><br> 
+          <p> Digite a idade do primeiro jogador</p> 
+          <input type="text" name="idade1" value=""><br><br> 
+          <p> Digite o nome do segundo jogador</p> 
+          <input type="text" name="nome2" value=""><br><br> 
+          <p> Digite a idade do segundo jogador</p> 
+          <input type="text" name="idade2" value=""><br><br> 
+          <input type="button"  name="enviar" value="Enviar" onclick="oraculo()"> 
+        </form> 
+ 
+  </body> 
+</html> 
