@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Almoço no RU </title>
+</head>
+
+	<script type="text/javascript">
+		        function almoco()
+		{
+			seu_nome = prompt("Digite seu nome: ","")
+
+			prato    = prompt("Digite o peso do seu prato: ","")
+			qnt_peso = (parseInt(prato) / 1000) * 30
+
+			suco     = prompt("Digite quantos copos de suco você consumiu: ","")
+			qnt_suco = parseInt(suco) * 4
+
+			sobremesa     = prompt("Digite quantos pratos de sobremesa você consumiu: ","")
+			qnt_sobremesa = parseInt(sobremesa) * 4
+
+			alert(seu_nome+" você consumiu "+prato+" no self-service;")
+			alert(suco+" copo(s) de suco;")
+			alert("e "+sobremesa+" prato(s) de sobremesa")
+
+			conta_total   = (qnt_peso + qnt_suco + qnt_sobremesa)
+
+			alert("Sua conta foi de: "+conta_total+ " reais")
+			alert("Obrigado pela preferência, volte sempre!") 
+		}
+	</script>
+<body>
+	<h1> Restaurante Universitário </h1>
+			<h3>Cardápio</h3>
+				<p>Self-service: R$ 30 reais o Kg <br> Suco: R$ 4,00 o copo <br> Sobremesa: R$ 4,00 o prato</p>
+			<form>
+				<input type="button" name="Restaurante Universitário" value="Valor da conta" onclick="almoco()">
+			</form>	
+</body>
+	<style type="text/css">
+    			form
+    		{
+    			font-family: Arial;
+    			font-style: italic;
+    			text-align: center;
+    			font-size: 20px; 
+    		}
+    		body 
+      		{ 
+        		background-color: black;  
+      		}
+      		h1
+      		{
+      			font-family: Arial;
+      			font-style: italic;
+    			text-align: center;
+    			font-size: 50px;
+    			color: white;	
+      		}
+      		h3
+      		{
+      			font-family: Arial;
+    			font-style: italic;
+    			text-align: center;
+    			font-size: 30px;
+    			color: white;
+      		}
+      		p
+      		{
+      			font-family: Arial;
+    			font-style: italic;
+    			text-align: center;
+    			font-size: 20px;
+    			color: white;
+      		}
+</html>

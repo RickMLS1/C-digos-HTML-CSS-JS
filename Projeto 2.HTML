@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>  
+<meta charset="utf-8">
+    <head> 
+
+    	<title> Área e perímetro de um paralelogramo</title>
+
+    </head>
+
+    <script type="text/javascript">
+    	function Area_paralelogramo()
+    	{
+    		Base   = prompt("Digite o valor da base: ")
+    		Altura = prompt("Digite o valor da altura: ")
+
+    		area = Base * Altura
+
+    		alert("A area do paralelogramo é: " +area)
+    	}
+    	function Perimetro_paralelogramo()
+    	{
+    		lado1 = prompt("Digite o valor do lado1: ")
+    		lado2 = prompt("Digite o valor do lado2: ")
+    		lado3 = prompt("Digite o valor do lado3: ")
+    		lado4 = prompt("Digite o valor do lado4: ")
+
+    		perimetro = parseInt(lado1) + parseInt(lado2) + parseInt(lado3) + parseInt(lado4)
+
+    		alert("O perimetro do paralelogramo é: " +perimetro)
+    	}
+    </script>
+
+    	<body>
+    			<h1>CALCULO DA ÁREA E O PERIMETRO DO PARALELOGRAMO</h1>
+    		<form>
+
+    			<input type="button" name="area" value="Area de um paralelogramo" onclick="Area_paralelogramo()"> <br><br>
+
+    			<input type="button" name="perimetro" value="Perimetro de um paralelogramo" onclick="Perimetro_paralelogramo()"> <br><br>
+    		</form>
+    	</body>
+    		<style type="text/css">
+    			form
+    		{
+    			font-family: Arial;
+    			text-align: center;
+    			font-size: 30px; 
+    		}
+    		body 
+      		{ 
+        		background-color: black; 
+      		}
+      		h1
+      		{
+      			font-family: Arial;
+    			text-align: center;
+    			font-size: 50px;
+    			color: white;	
+      		}
+    		</style>
+</html>            

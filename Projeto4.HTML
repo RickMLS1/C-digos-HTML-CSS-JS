@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cálculo da nota</title>
+</head>
+	<script type="text/javascript">
+		function tarefas() 
+		{
+			tarefa1 = parseFloat (prompt("Digite o valor do tarefa1: "))
+    		tarefa2 = parseFloat (prompt("Digite o valor do tarefa2: "))
+    		tarefa3 = parseFloat (prompt("Digite o valor do tarefa3: "))
+    		tarefa4 = parseFloat (prompt("Digite o valor do tarefa4: "))
+
+    		Media_tarefas = (tarefa1 / 4) + (tarefa2 / 4) + (tarefa3 / 4) + (tarefa4 / 4)
+
+    		alert("A média da tarefa é: " +Media_tarefas)
+		}
+		function provas()
+		{
+			nota1 = parseFloat (prompt("Digite o valor da nota1: "))
+    		nota2 = parseFloat (prompt("Digite o valor da nota2: "))
+
+    		Media_notas = (nota1 / 2) + (nota2 / 2)
+
+    		alert("A média das provas é: " +Media_notas)
+		}
+		function media_total()
+		{
+			Media_tarefa = parseFloat (prompt("Digite o valor da media das tarefas: "))
+			Media_nota   = parseFloat (prompt("Digite o valor da media das provas: "))
+
+			Media_total  = (Media_tarefa / 2) + (Media_nota / 2)
+
+			alert("A média total é: " +Media_total)
+		}
+	</script>
+<body>
+	<h1> Cálculo da média</h1>
+		<form>
+			<input type="button" name="média tarefas" value="Média tarefas" onclick="tarefas()"> <br><br>
+
+			<input type="button" name="média provas" value="Média provas" onclick="provas()"> <br><br>
+
+			<input type="button" name="média provas" value="Média total" onclick="media_total()"> <br><br>
+		</form>
+</body>
+		<style type="text/css">
+    			form
+    		{
+    			font-family: Arial;
+    			font-style: italic;
+    			text-align: center;
+    			font-size: 20px; 
+    		}
+    		body 
+      		{ 
+        		background-color: black; 
+      		}
+      		h1
+      		{
+      			font-family: Arial;
+      			font-style: italic;
+    			text-align: center;
+    			font-size: 50px;
+    			color: white;	
+      		}
+    		</style>
+</html>

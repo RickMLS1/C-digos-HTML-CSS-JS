@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>  
+<meta charset="utf-8">
+    <head> 
+
+    	<title> Conversão de medidas </title>
+
+    </head> 
+
+    <script language="javascript"> 
+
+    	function décimetro()
+    	{
+    		décimetro = prompt("Entre com a quantidade de décimetros que deseja converter:","")
+
+    		metros = décimetro / 10
+
+    		alert(+décimetro+" décimetros são "+metros+" metros")
+    	}
+    	
+    	function centímetro()
+    	{
+    		centímetro = prompt("Entre com a quantidade de centímetros que deseja converter","")
+
+    		metros = centímetro / 100
+
+    		alert(+centímetro+" centímetros são "+metros+" metros")
+    	}
+
+    	function metro()
+    	{
+    		metro = prompt("Entre com a quantidade de metro que deseja converter","")
+
+    		centímetro = metro * 100
+
+    		alert(+metro+" metros são "+centímetro+" centímetros")
+    	}
+
+    	function metro_dec()
+    	{
+    		metro_dec = prompt("Entre com a quantidade de metros que deseja converter","")
+
+    		décimetro = metro_dec * 10
+
+    		alert(+metro_dec+" metros são "+décimetro+" décimetros")
+    	}
+	</script>	
+
+    <body>
+    	<h1>Conversor de medidas</h1>
+    		<form>
+    			<input type="document.forms[0]" name="conversao" value="realizar conversão décimetro para metro" onclick="décimetro()"> <br><br>
+
+    			<input type="document.forms[1]" name="conversao" value="realizar conversão centímetro para metro" onclick="centímetro()"> <br><br>
+
+    			<input type="document.forms[2]" name="conversao" value="realizar conversão metros para centímetro" onclick="metro()"> <br><br>
+
+    			<input type="document.forms[3]" name="conversao" value="realizar conversão metros para décimetros" onclick="metro_dec()"> <br><br>
+    		</form>
+    </body>
+		<style type="text/css">
+    		form
+    		{
+    			font-family: Arial;
+    			text-align: center;
+    			font-size: 30px; 
+    		}
+    		body 
+      		{ 
+        		background-color: black; 
+      		}
+      		h1
+      		{
+      			font-family: Arial;
+    			text-align: center;
+    			font-size: 50px;
+    			color: white;	
+      		}
+    	</style>
+</html>
